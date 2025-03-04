@@ -1,0 +1,98 @@
+<div class="main">
+  <div class="title">
+    <h2 style="background-color: #2BB9A2;color: white;padding: 8px;border-radius: 10px;">Education</h2>
+  </div>
+
+  <div class="container container2">
+    <mat-tab-group class="table-responsive">
+      <mat-tab label="School's">
+        <div class="mt-2 schooltabs">
+          <mat-tab-group>
+            <mat-tab label="Govt School's">
+              <table class="table table-hover mat-elevation-z8">
+                <thead>
+                  <tr class="table-secondary">
+                    <th scope="col">School Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-light" *ngFor="let school of govtSchools">
+                    <td>{{ school.name }}</td>
+                    <td><a href="{{ school.contact }}" target="_blank">{{ school.location }}</a></td>
+                    <td>{{ school.contact }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </mat-tab>
+
+            <mat-tab label="Private School's">
+              <table class="table table-hover mat-elevation-z8">
+                <thead>
+                  <tr class="table-secondary">
+                    <th scope="col">School Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-light" *ngFor="let school of privateSchools">
+                    <td>{{ school.name }}</td>
+                    <td><a href="{{ school.contact }}" target="_blank">{{ school.location }}</a></td>
+                    <td>{{ school.contact }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="College's">
+        <div class="mt-2 schooltabs">
+          <mat-tab-group>
+            <mat-tab label="Govt College's">
+              <table class="table table-hover mat-elevation-z8">
+                <thead>
+                  <tr class="table-secondary">
+                    <th scope="col">College Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-light" *ngFor="let college of govtCollege">
+                    <td>{{ college.name }}</td>
+                    <td><a href="{{ college.contact }}" target="_blank">{{ college.location }}</a></td>
+                    <td>{{ college.contact }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </mat-tab>
+
+            <mat-tab label="Private College's">
+              <table class="table table-hover mat-elevation-z8">
+                <thead>
+                  <tr class="table-secondary">
+                    <th scope="col">College Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-light" *ngFor="let college of privateCollege">
+                    <td>{{ college.name }}</td>
+                    <td><a href="{{ college.contact }}" target="_blank">{{ college.location }}</a></td>
+                    <td>{{ college.contact }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </mat-tab>
+      
+    </mat-tab-group>
+  </div>
+</div>

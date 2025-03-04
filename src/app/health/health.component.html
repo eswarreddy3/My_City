@@ -1,0 +1,43 @@
+<div class="main">
+  <div class="title">
+    <h2 style="background-color: #2BB9A2;color: white;padding: 8px;border-radius: 10px;">Health and Medical</h2>
+  </div> 
+  <div class="container2">
+    <!-- Tabs Section -->
+    <mat-tab-group>
+      <mat-tab label="Hospital">
+        <div class="tab-content mt-2">
+          <mat-card class="hospital-card" *ngFor="let hospital of hospitals" >
+            <mat-card-header>
+              <mat-card-title>{{hospital.name}}</mat-card-title>
+            </mat-card-header> 
+            <mat-card-content>
+              <p><strong>Specialty:</strong> {{hospital.specialty}}</p>
+            </mat-card-content>
+            <button mat-button class="read-more-button" (click)="openDialog(hospital); $event.stopPropagation();">Read More</button>
+          </mat-card>
+        </div>
+      </mat-tab>
+      <mat-tab label="Blood Bank">
+        <div class="tab-content mt-2">
+          <mat-card class="hospital-card" *ngFor="let bb of bloodBanks">
+            <mat-card-header>
+              <mat-card-title>{{bb.name}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Specialty:</strong> {{bb.services}}</p>
+            </mat-card-content>
+            <button mat-button class="read-more-button" (click)="openDialog(bb); $event.stopPropagation();">Read More</button>
+          </mat-card>
+        </div>
+      </mat-tab>
+      <mat-tab label="Ambulance">
+        <!-- Ambulance Content -->
+      </mat-tab>
+    </mat-tab-group>
+    
+  </div>
+
+  <br>
+  <br>
+</div>

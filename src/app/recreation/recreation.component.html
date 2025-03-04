@@ -1,0 +1,46 @@
+<div class="main">
+    <div class="title">
+        <h2 style="background-color: #2BB9A2;color: white;padding: 8px;border-radius: 10px;">Recreation</h2>
+    </div>
+
+    <div class="container2">
+      <!-- Tabs Section -->
+      <mat-tab-group>
+        <mat-tab label="Parks">
+          <div class="tab-content mt-2">
+            <mat-card class="park-card" *ngFor="let park of parks">
+              <mat-card-header>
+                <mat-card-title>{{park.name}}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p><strong>Address:</strong> {{park.url}}</p>
+              </mat-card-content>
+              <button mat-button class="read-more-button" (click)="openDialog(park); $event.stopPropagation();">View Park</button>
+            </mat-card>
+          </div>
+        </mat-tab>
+        <mat-tab label="Gym's">
+          <div class="tab-content mt-2">
+            <mat-card class="park-card" *ngFor="let gym of gyms">
+              <mat-card-header>
+                <mat-card-title>{{gym.name}}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p><strong>Address:</strong> {{gym.url}}</p>
+              </mat-card-content>
+              <button mat-button class="read-more-button" (click)="openDialog(gym); $event.stopPropagation();">View Gym</button>
+            </mat-card>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      
+    </div>
+  
+    <br>
+    <br>
+</div>
+
+
+
+
+  

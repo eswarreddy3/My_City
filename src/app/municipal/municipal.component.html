@@ -1,0 +1,613 @@
+<div class="main">
+    <br>
+  <div class="title">
+    <h2 style="background-color: #2BB9A2;color: white;padding: 8px;border-radius: 10px;">MUNICIPALITY SERVICES</h2>
+  </div>
+  <br>
+<!-- app.component.html -->
+ <div class="navcontainer">
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" routerLink="/home">HOME</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ONLINE SERVICES
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/services/property-tax">Property Tax</a></li>
+              <!-- More dropdown items -->
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              APPLICATION FORMS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/forms/birth-death-certificate">BIRTH/DEATH CERTIFICATE - CDMA</a></li>
+              <li><a class="dropdown-item" routerLink="/forms/child-name-inclusion">CHILD NAME INCLUSION - CDMA</a></li>
+              <li><a class="dropdown-item" routerLink="/forms/corrections-birth-certificate">CORRECTIONS IN BIRTH CERTIFICATE - CDMA</a></li>
+              <li><a class="dropdown-item" routerLink="/forms/corrections-death-certificate">CORRECTIONS IN DEATH CERTIFICATE - CDMA</a></li>
+              <li><a class="dropdown-item" routerLink="/forms/non-availability-birth-application">NON AVAILABILITY BIRTH APPLICATION - CDMA</a></li>
+              <li><a class="dropdown-item" routerLink="/forms/non-availability-death-application">NON AVAILABILITY DEATH APPLICATION - CDMA</a></li>
+              <!-- More dropdown items -->
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CONTACTS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/contacts">Contacts</a></li>
+              <!-- More dropdown items -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    </div>
+    <div class="newcontainer" >
+        <!-- NEW -->
+       <div id="block-views-highlights-block" style="display: flex;">
+        <div class="col-md-6 col-lg-4">
+          <h2 class="block__title block-title" style="margin-left: 5px;margin-bottom: 0;">Key Contacts » </h2>
+        </div>
+        <div class="col-md-2 col-lg-4">
+          <h3 style="margin-bottom: 5px; margin-top: 10px;">Chairman</h3>
+          <p style="margin: 0px;">Name: Sk.Rafani</p>
+          <p>Contact: 6345688666</p>
+        </div>
+        <div class="col-md-2 col-lg-4">
+          <h3 style="margin-bottom: 5px; margin-top: 10px;">Commissioner</h3>
+          <p style="margin: 0px;">Name: Prasad</p>
+          <p>Contact: 6345688666</p>
+        </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="newcontainer" >
+      <div class="newcontainer3" >
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="service-wrapper">
+              <a (click)="togglePropertyTax()" class="service-item">
+                <i class="fas fa-home"></i>
+                <p>Property Tax</p>
+              </a>
+              <a (click)="toggleLandTax()" class="service-item">
+                <i class="fas fa-university"></i>
+                <p>Land Tax (VLT)</p>
+              </a>
+              <a (click)="toggleWaterCharges()" class="service-item">
+                <i class="fas fa-tint"></i>
+                <p>Water Charges</p>
+              </a>
+              <a (click)="toggleApplicationForWater()" class="service-item">
+                <i class="fas fa-toolbox"></i>
+                <p>Application for Water</p>
+              </a>
+              <a (click)="toggleTradeLicense()" class="service-item">
+                <i class="fas fa-recycle"></i>
+                <p>Trade Licenses</p>
+              </a>
+              <a (click)="toggleAdvertisementTax()" class="service-item">
+                <i class="fas fa-bullhorn"></i>
+                <p>Advertisement Tax</p>
+              </a>
+              <a href="/path-to-mobile-towers" class="service-item">
+                <i class="fas fa-broadcast-tower"></i>
+                <p>Online Building/Layout Permission</p>
+              </a>
+              <a (click)="toggleMarriageRegistrations()" class="service-item">
+                <i class="fas fa-heart"></i>
+                <p>Marriage Registrations</p>
+              </a>
+              <a (click)="toggleSewerageConnection()" class="service-item">
+                <i class="fas fa-poop"></i>
+                <p>Sewerage Connection</p>
+              </a>
+              <a href="/path-to-road-cutting" class="service-item">
+                <i class="fas fa-tree"></i>
+                <p>Tree Felling Permission</p>
+              </a>
+              <a href="/path-to-grievances" class="service-item">
+                <i class="fas fa-road"></i>
+                <p>Right Of Way Permission</p>
+              </a>
+              <a href="/path-to-unified-birth-and-death" class="service-item">
+                <i class="fas fa-baby"></i>
+                <p>Birth & Death Registrations</p>
+              </a>
+            </div>
+            
+            
+          </div> 
+    
+          <div class="col-md-4">
+            <div class="widget-box2">
+              <h2 class="title2">E - <span style="color: black;">Payments</span></h2>
+              <ul class="widget-list">
+                <li>
+                  <i class="fas fa-house-damage bg1"></i> <a href="https://cdma.ap.gov.in/en/ptpayments" target="_blank"> Property Tax </a>
+                </li>
+                <li>
+                  <i class="fas fa-tint bg2"></i> <a href="https://cdma.ap.gov.in/en/wcpayments" target="_blank"> Water Charges </a>
+                </li>
+                <li>
+                  <i class="fas fa-briefcase bg3"></i> <a href="https://cdma.ap.gov.in/en/tlpayments" target="_blank"> Trade License Fee </a>
+                </li>
+                <li>
+                  <i class="fas fa-toilet bg1"></i> <a href="https://cdma.ap.gov.in/en/scpayments" target="_blank"> Sewerage Charges </a>
+                </li>
+                <li>
+                  <i class="fas fa-exchange-alt bg2"></i> <a href="https://cdma.ap.gov.in/en/mutationpayments" target="_blank"> Property Mutation Fee </a>
+                </li>
+                <li>
+                  <i class="fas fa-file-contract bg3"></i> <a href="https://cdma.ap.gov.in/en/lamspayments" target="_blank"> Leases & Agreements Fee </a>
+                </li>
+                <li>
+                  <i class="fas fa-hand-holding-usd bg1"></i> <a href="https://cdma.ap.gov.in/en/userfee" target="_blank"> CLAP </a>
+                </li>
+              </ul>
+              
+          </div> 
+    
+          <!-- <div class="widget-box2">
+            <h2 class="title2">Citizen <span>Corner</span></h2>
+            <ul class="widget-list">
+                <li>
+                    <i class="fa fa-user bg1"></i> <a href="#" data-toggle="dropdown" aria-expanded="false"> Citizen Charter </a><span class="caret"></span>
+                    <ul class="dropdown-menu" style="background-color:white" role="menu">
+                        <li><a title="English" target="_blank" href="/Files/CitizenServices/CS_English.pdf">English</a></li>
+                        <li><a title="తెలుగు" target="_blank" href="/Files/CitizenServices/CS_telugu.pdf">తెలుగు</a></li>
+                        <li><a title="اردو" target="_blank" href="/Files/CitizenServices/CS_Urdu.pdf">اردو</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="fa fa-map-marker bg1"></i> <a href="https://egovindia.in/pattanapragathi/statemap/" target="_blank"> Municipalities (Locations) </a>
+                </li>
+                <li>
+                    <i class="fa fa-sitemap bg2"></i> <a href="/etistmvcdfwefrzxczx/vcvcvcvcv" target="_blank"> District/ULB Portals </a>
+                </li>
+                <li>
+                    <i class="fa fa-home bg3"></i> <a href="/etistmvcdfwefrzxczx/bcvbcvbcvb" target="_blank"> Tenders/EOI </a>
+                </li>
+                <li>
+                    <i class="fa fa-calendar bg1"></i> <a href="https://telangana.gov.in/downloads/calendar/" target="_blank"> Telangana Holidays List </a>
+                </li>
+            </ul>
+        </div> -->
+          
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+
+  <br>
+
+  <!-- Property Tax Section -->
+  <div #propertyTaxSection *ngIf="showPropertyTax" class="PropertyTax">
+    <div class="mservices">
+      <h3 style="font-size: 25px;">Property Tax</h3>
+    </div>
+    <div class="newcontainer">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Range Wise Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Range Wise Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Range Wise Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Range Wise Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Range Wise Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Range Wise Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Range Wise Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Range Wise Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+          <div class="profiles">
+            <span>
+              <h5 style="font-size: 1.25rem">Range Wise Dues:</h5>
+              Model Application for Water Tap Connection
+              <a
+                href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+                target="_blank"
+                data-toggle="tooltip"
+                title="Click Here!"
+              >
+                <span class="click_here" style="color:red">Click Here</span>
+              </a>
+            </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Land Tax (VLT) Section -->
+<div #landTaxSection *ngIf="showLandTax" class="LandTax">
+  <div class="mservices">
+    <h3 style="font-size: 25px;">Land Tax (VLT)</h3>
+  </div>
+  <div class="newcontainer">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+            Model Application for Water Tap Connection
+            <a
+              href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+              target="_blank"
+              data-toggle="tooltip"
+              title="Click Here!"
+            >
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+            Model Application for Water Tap Connection
+            <a
+              href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+              target="_blank"
+              data-toggle="tooltip"
+              title="Click Here!"
+            >
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+            Model Application for Water Tap Connection
+            <a
+              href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+              target="_blank"
+              data-toggle="tooltip"
+              title="Click Here!"
+            >
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Water Charges Section -->
+<div #landTaxSection *ngIf="showWaterCharges" class="LandTax">
+  <div class="mservices">
+    <h3 style="font-size: 25px;">Water Charges</h3>
+  </div>
+  <div class="newcontainer">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+            Model Application for Water Tap Connection
+            <a
+              href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+              target="_blank"
+              data-toggle="tooltip"
+              title="Click Here!"
+            >
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+            Model Application for Water Tap Connection
+            <a
+              href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+              target="_blank"
+              data-toggle="tooltip"
+              title="Click Here!"
+            >
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+            Model Application for Water Tap Connection
+            <a
+              href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+              target="_blank"
+              data-toggle="tooltip"
+              title="Click Here!"
+            >
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Application for Water & Sewerage Section -->
+<div #landTaxSection *ngIf="showApplicationForWater" class="LandTax">
+  <div class="mservices">
+    <h3 style="font-size: 25px;">Common Application for Water & Sewerage</h3>
+  </div>
+  <div class="newcontainer">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+            Model Application for Water Tap Connection
+            <a
+              href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+              target="_blank"
+              data-toggle="tooltip"
+              title="Click Here!"
+            >
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+            Model Application for Water Tap Connection
+            <a
+              href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+              target="_blank"
+              data-toggle="tooltip"
+              title="Click Here!"
+            >
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">Know Your Dues:</h5>
+            Model Application for Water Tap Connection
+            <a
+              href="/etistmvcdfwefrzxczx/S!(CGGENC5PAR!TEXT)?LeYanTyhRR=Ly9GaWxlcy8vQ2l0aXplblNlcnZpY2VzLy8%3D&amp;FnxqsernB=WaterTapconnectionapplicationModel.pdf"
+              target="_blank"
+              data-toggle="tooltip"
+              title="Click Here!"
+            >
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Trade Licenses -->
+
+<!-- Advertisement Tax -->
+
+<!-- Marriage Registrations -->
+
+<!-- Sewerage Connection -->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div #propertyTaxSection *ngIf="showPropertyTax" class="PropertyTax">
+  <div class="mservices">
+    <h3 style="font-size: 25px;">Property Tax</h3>
+  </div>
+  <div class="newcontainer">
+    <div class="row">
+      
+      <div class="col-md-4" *ngFor="let column of [0, 1, 2]">
+        <div *ngFor="let service of propertyTaxServices | slice:column*4:(column+1)*4" class="profiles">
+          <span>
+            <h5 style="font-size: 1.25rem">{{ service.title }}:</h5>
+            {{ service.description }}
+            <a href="{{ service.link }}"
+               target="_blank"
+               data-toggle="tooltip"
+               title="Click Here!">
+              <span class="click_here" style="color:red">Click Here</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

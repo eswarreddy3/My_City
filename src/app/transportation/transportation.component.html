@@ -1,0 +1,40 @@
+<div class="main">
+    <div class="title">
+        <h2 style="background-color: #2BB9A2;color: white;padding: 8px;border-radius: 10px;">Transportation and Roads</h2>
+      </div>
+
+    <div class="mt-2 container2">
+        <mat-tab-group class="table-responsive">
+            <mat-tab label="RTC Busstand">
+                <table class="mt-2 table table-hover mat-elevation-z8">
+                    <thead>
+                      <tr class="table-secondary">
+                        <th scope="col">Source</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Timings</th>
+                        <!-- <th scope="col">Ticket Price</th> -->
+                      </tr>
+                    </thead> 
+                    <tbody>
+                      <tr class="table-light" *ngFor="let bus of busStand">
+                        <td>{{ bus.source }}</td>
+                        <td>{{ bus.destination }}</td>
+                        <td>
+                            {{ bus.timings.slice(0, 2).join(', ') }} 
+                            <span (click)="openDialog(bus)" style="color: blue; cursor: pointer; margin-left: 8px;">
+                              Read More...
+                          </span>
+                          
+                        </td>
+                        <!-- <td>{{ bus.ticketPrice }}</td> -->
+                      </tr>
+                    </tbody>
+                  </table>
+            </mat-tab>
+
+            <mat-tab label="Private Bus's">
+
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

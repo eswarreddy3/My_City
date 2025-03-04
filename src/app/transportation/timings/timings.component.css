@@ -1,0 +1,21 @@
+mat-dialog-title {
+    color: #2BB9A2; /* Matching the title color to your theme */
+  }
+  
+  mat-icon {
+    color: #2BB9A2; /* Giving the icon a theme-based color */
+    margin-right: 8px;
+  }
+  
+  mat-dialog-content p {
+    margin-bottom: 20px; /* Space above the list for better readability */
+  }
+  
+  mat-dialog-actions {
+    margin-top: 20px;
+  }
+  
+  mat-button {
+    color: #2BB9A2; /* Theme color for the button */
+  }
+  

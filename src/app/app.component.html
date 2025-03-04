@@ -1,0 +1,82 @@
+<div class="main">
+  <div class="row">
+    <div class="col-md-2 mt-2">
+      <img src="assets/logo2.png" alt="Logo" class="img-fluid" style="width: 85%;">
+    </div>
+    <div class="col-md-8 text-right mt-4">
+      <h1 class="Title"><b>My City - Chilakaluripet</b></h1>
+      <p class="lead">Citizen friendly portal</p>
+    </div>
+    <div class="col-md-2 text-right mt-4">
+      <!-- Buttons positioned to the right -->
+      <!-- <button class="btn btn-primary" (click)="setLanguage('te')">తెలుగు</button>
+      <button class="btn btn-secondary" (click)="setLanguage('en')">English</button> -->
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--app.component.html-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 4px 100px;">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item dropdown" [ngClass]="{'open': isDropdownOpen}">
+          <a
+            class="nav-link dropdown-toggle"
+            href="javascript:void(0)"
+            (click)="toggleDropdown()"
+            [class.show]="isDropdownOpen"
+            [attr.aria-expanded]="isDropdownOpen">
+            Services 
+          </a>
+          <ul
+            class="dropdown-menu"
+            [class.show]="isDropdownOpen"
+            aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="/municipal" (click)="closeDropdown()">Municipal</a></li>
+            <!-- <li><a class="dropdown-item" routerLink="/revenue" (click)="closeDropdown()">Revenue</a></li> -->
+            <li><a class="dropdown-item" routerLink="/safety" (click)="closeDropdown()">Public Safety</a></li>
+            <li><a class="dropdown-item" routerLink="/transportation" (click)="closeDropdown()">Transportation and Roads</a></li>
+            <li><a class="dropdown-item" routerLink="/health" (click)="closeDropdown()">Health and Medical</a></li>
+            <li><a class="dropdown-item" routerLink="/education" (click)="closeDropdown()">Education and Libraries</a></li>
+            <li><a class="dropdown-item" routerLink="/recreation" (click)="closeDropdown()">Physical & Mental Fitness</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br>
+
+
+<router-outlet></router-outlet>
+<br>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" title="Go to top" (click)="scrollToTop()" *ngIf="showScrollButton">
+  <i class="fa fa-arrow-up"></i> Top
+</button>
+
+<br>
+<footer class="footer">
+  <div class="container text-center">
+    <span>© 2024 Eswar Reddy - All Rights Reserved.</span>
+  </div>
+</footer>

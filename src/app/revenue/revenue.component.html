@@ -1,0 +1,68 @@
+<div style="background-color: aquamarine;">
+  <div class="footer">
+    <div class="fcontainer">
+      <div class="frow pt-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="footer-contact">
+                <h2>Office Contact</h2>
+                <p>
+                  <i class="fa fa-map-marker-alt"></i>
+                    4th Block, Room No:208, First Floor, A.P Secretariat, Velagapudi, Andhra Pradesh
+                </p>
+                <!-- Social links section, hidden by default -->
+                <div class="footer-social d-none">
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                  <a href=""><i class="fab fa-youtube"></i></a>
+                </div>
+                  <!-- Dynamic content for last updated and visitor count -->
+                <div class="footer-social">
+                    <table>
+                      <tr>
+                        <th>Last Updated</th>
+                        <td></td><td class="pl-2 pr-2">:</td><td></td>
+                        <td>20-12-2024</td>
+                      </tr>
+                    </table>
+                </div>
+                <div class="footer-social">
+                    <table>
+                      <tr>
+                        <th>Visitors Count</th>
+                        <td></td><td class="pl-2 pr-2">:</td><td></td>
+                        <td><img src="https://www.counter12.com/img-bWwD6002xc4cAxC4-45.gif" border="0" alt="counter"></td>
+                      </tr>
+                    </table>
+                </div>
+              </div>
+                
+        </div>
+
+          <!-- location.component.html -->
+        <div class="col-md-6 col-lg-4">
+          <div class="newsletter">
+            <h2>Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.405749208032!2d80.16480561537292!3d16.089174488873167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fbf5a44eb6db%3A0xc07e5f03d9f2b55c!2sChilakaluripet%2C%20Andhra%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1609430886400" 
+            allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+
+
+          <div class="col-md-6 col-lg-4"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- srvices -->
+
+
+
+<div id="circle-container" [style.transform]="'rotate(' + currentAngle + 'deg)'" (click)="rotateWheel()">
+  <div *ngFor="let service of services" class="service"
+       [style.transform]="'rotate(' + service.angle + 'deg) translateX(200px)'">
+    {{ service.name }}
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Bus Timings for {{ data.source }} to {{ data.destination }}</h2>
+<mat-dialog-content>
+  <p>Here are the bus departure times:</p>
+  <mat-list>
+    <mat-list-item *ngFor="let time of data.timings">
+      <mat-icon>schedule</mat-icon>
+      <h4 mat-line>{{ time }}</h4>
+    </mat-list-item>
+  </mat-list>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close class="btn btn-danger">Close</button>
+</mat-dialog-actions>

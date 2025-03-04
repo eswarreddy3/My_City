@@ -1,0 +1,175 @@
+<br>
+<div class="main">
+  <div class="row">
+      <!-- First Column -->
+      <div class="col-md-4">
+          <div *ngFor="let profile of profiles; let i = index" >
+              <div class="topcard" style="border: none;">
+                  <div class="topcard-body p-0">
+                      <div class="d-flex align-items-center" style="justify-content: space-around;">
+                          <div class="profileDescription">
+                              <div class="profileName">
+                                  <h5 class="name">{{ profile.name }}</h5>
+                              </div>
+                              <div class="profileDesignation">
+                                  <h6 class="Designation">{{ profile.role }}</h6>
+                              </div>
+                          </div>
+                          <div class="profilePhoto">
+                              <img [src]="profile.imgUrl" alt="image" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Second Column -->
+      <div class="col-md-8">
+        <div class="gallery">
+         <img [src]="currentImage" class="card-img-top" alt="Chilakaluripet Image"
+             (click)="nextImage()" (mouseenter)="stopCarousel()" (mouseleave)="startCarousel()"
+             style="max-width: 90%; padding: 10px;">
+        </div>
+  </div>
+  
+  </div>
+  <hr>
+  <div>
+      <div class="mt-2">
+        <h1 class="dashboard"><b></b>Services</h1>
+      </div>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+              <a [routerLink]="['/municipal']" class="card text-white" style="background-color: #007BFF;"> <!-- Blue -->
+                  <div class="card-boody">
+                      <i class="fas fa-city con"></i>
+                      <h5 class="card-title">Municipal Services</h5>
+                  </div>
+              </a>
+          </div>
+          <!-- <div class="col-md-4 mb-4">
+              <a [routerLink]="['/revenue']" class="card text-white" style="background-color: #6C757D;"> 
+                  <div class="card-boody">
+                      <i class="fas fa-hand-holding-usd con"></i>
+                      <h5 class="card-title">Revenue Services</h5>
+                  </div>
+              </a>
+          </div> -->
+          <div class="col-md-4 mb-4">
+              <a [routerLink]="['/safety']" class="card text-white" style="background-color: #FFC107;"> <!-- Yellow -->
+                  <div class="card-boody">
+                      <i class="fas fa-shield-alt con"></i>
+                      <h5 class="card-title">Public Safety</h5>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 mb-4">
+              <a [routerLink]="['/transportation']" class="card text-white" style="background-color: #DC3545;"> <!-- Red -->
+                  <div class="card-boody">
+                      <i class="fas fa-road con"></i>
+                      <h5 class="card-title">Transportation and Roads</h5>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 mb-4">
+              <a [routerLink]="['/health']" class="card text-white" style="background-color: #28A745;"> <!-- Green -->
+                  <div class="card-boody">
+                      <i class="fas fa-hospital con"></i>
+                      <h5 class="card-title">Health and Medical</h5>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 mb-4">
+              <a [routerLink]="['/education']" class="card text-white" style="background-color: #17A2B8;"> <!-- Light Blue -->
+                  <div class="card-boody">
+                      <i class="fas fa-school con"></i>
+                      <h5 class="card-title">Education and Libraries</h5>
+                  </div>
+              </a>
+          </div>
+          <div class="col-md-4 mb-4">
+              <a [routerLink]="['/recreation']" class="card text-white" style="background-color: #6F42C1;"> <!-- Purple -->
+                  <div class="card-boody">
+                      <i class="fas fa-football-ball con"></i>
+                      <h5 class="card-title">Physical & Mental Fitness</h5>
+                  </div>
+              </a>
+          </div>
+      </div>
+      
+    </div>  
+      
+      <hr>
+
+      <div class="cptO">
+        <h4 class="text-white" style="font-weight: 800;font-size: 24px;padding-top: 25px;padding-left: 15px;font-family: emoji;">
+            Chilakaluripet Overview
+        </h4>
+      
+
+      <div class="info-container">
+        
+        <div class="info-container1">
+          <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6" style="display: flex; justify-content: center;">
+              <div class="info-box">
+                <i class="fas fa-city"></i>
+                <div class="info-text">
+                  <h4>My City</h4>
+                  <p>Chilakaluripet</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6" style="display: flex; justify-content: center;">
+              <div class="info-box">
+                <i class="fa fa-globe"></i>
+                <div class="info-text">
+                  <h4>Area</h4>
+                  <p>1,60,205 Sq. Kms</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6" style="display: flex; justify-content: center;">
+              <div class="info-box">
+                <i class="fas fa-chart-area"></i>
+                <div class="info-text">
+                  <h4>Vilages</h4>
+                  <p>16</p>
+                </div> 
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6" style="display: flex; justify-content: center;">
+              <div class="info-box">
+                <i class="fas fa-users"></i>
+                <div class="info-text">
+                  <h4>Population</h4>
+                  <p>5 Million (2011)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+                    <!-- N E W S -->
+      
+        <div class="column latest-news-container">
+          <div class="header">
+            <span>Latest News</span>
+            <a routerLink="/newspapers" class="btn-view-all">View All</a>
+          </div>
+          <marquee class="news-marquee" behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+            <ul>
+              <li *ngFor="let item of newsItems">
+                <span class="news-date">{{ item.date }}</span>
+                <span class="news-title">{{ item.title }}</span>
+              </li>
+            </ul>
+          </marquee>
+        </div>
+      </div>
+    </div>
+      
+</div>

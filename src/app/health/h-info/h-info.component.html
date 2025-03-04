@@ -1,0 +1,15 @@
+<!-- In h-info.component.html -->
+<div style="padding: 20px;">
+    <h1 class="title" mat-dialog-title>{{ data.item.name }}</h1>
+    <div mat-dialog-content>
+        <p class="mt-2 content"><strong>Specialty/Services:</strong> {{ data.item.specialty || data.item.services }}</p>
+        <p class="content"><strong>Address:</strong> {{ data.item.address }}</p>
+        <p class="content"><strong>Open Hours:</strong> {{ data.item.openHours }}</p>
+        <p class="content">
+            <strong>Location:</strong> <a href="{{ data.item.location }}" target="_blank">Open in Google Maps</a>
+        </p>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button class="btn btn-danger" (click)="onClose()">Close</button>
+    </div>
+</div>

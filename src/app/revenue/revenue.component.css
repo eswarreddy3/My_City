@@ -1,0 +1,87 @@
+.footer{
+    padding-left: 50px;
+    padding-right: 10px;
+    background-color: #222d40;
+    position: relative;
+    color: white;
+}
+
+.frow {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.fcontainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.newsletter {
+    margin-bottom: 10px;
+}
+
+.newsletter iframe {
+    width: auto !important;           
+    height: 100px;       
+    border-radius: 6px;      
+}
+
+/* location.component.css */
+
+/* services */
+
+/* Container style to center and add a shadow for depth */
+#circle-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 40px auto;
+    border-radius: 50%;
+    transition: transform 1s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #f8f9fa; /* Light grey background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Individual service block styling */
+  .service {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 0; /* Center rotation on the edge */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ccc; /* Light border for definition */
+    width: 120px; /* Slightly larger blocks */
+    height: 50px; /* Taller blocks */
+    margin-left: -60px; /* Center service blocks */
+    margin-top: -25px; /* Adjust vertical centering */
+    border-radius: 25px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Soft shadow for depth */
+    cursor: pointer; /* Cursor indicates interactiveness */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for interactivity */
+  .service:hover {
+    background-color: #e9ecef; /* Light blue background on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Deeper shadow for focus */
+  }
+  
+  /* Add more distinct colors to each service block for visual variety */
+  .service:nth-child(1) { background-color: #007bff; color: white; } /* Blue */
+  .service:nth-child(2) { background-color: #6c757d; color: white; } /* Gray */
+  .service:nth-child(3) { background-color: #ffc107; color: black; } /* Yellow */
+  .service:nth-child(4) { background-color: #dc3545; color: white; } /* Red */
+  .service:nth-child(5) { background-color: #28a745; color: white; } /* Green */
+  .service:nth-child(6) { background-color: #17a2b8; color: white; } /* Light Blue */
+  .service:nth-child(7) { background-color: #6f42c1; color: white; } /* Purple */
+  
+  

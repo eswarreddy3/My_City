@@ -1,0 +1,114 @@
+.newcontainer{
+    display: flex;          
+    justify-content: center; 
+    align-items: center;   
+    flex-direction: row; 
+}
+.newcontainer3{
+  display: flex;          
+  justify-content: center; 
+  align-items: center;   
+  flex-direction: row; 
+  width: 85%;
+}
+.service-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .service-item {
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25%;
+    border: thin solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    height: 135px;
+    text-decoration: none;
+    color: #fafafa;
+    margin-left: -1px;
+    background: #023057;
+  }
+  
+  .service-item i {
+    font-size: 50px; 
+    margin-bottom: 5px;
+  }
+
+  .service-item:hover {
+    background-color: #025A8D; 
+    cursor: pointer; 
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+
+  
+  /* .service-item p {
+    font-size: 0.95rem;
+    margin: 0;
+    font-weight: bold;
+  } */
+  
+  @media (max-width: 768px) {
+    .service-item {
+      flex: 1 0 46%; /* 2 columns on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-item {
+      flex: 1 0 100%; /* Full width on very small screens */
+    }
+  }
+  
+  .widget-box2 {
+    background: white;
+    border: 1px solid #ddd;
+    margin: 0 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.title2 {
+    font-size: 1.5rem; /* Adjusted for emphasis */
+    padding: 8px 16px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.widget-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget-list li {
+    padding: 10px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.widget-list li:last-child {
+    border-bottom: none;
+}
+
+.widget-list i {
+    margin-right: 8px;
+}
+
+.dropdown-menu li {
+    list-style-type: none;
+}
+
+.dropdown-menu {
+    padding: 5px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.fa {
+    color: var(--primary);
+}
